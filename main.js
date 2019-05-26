@@ -4,6 +4,7 @@ const getData = () => {
     url: `https://devtest.equisolve-dev.com/`,
     success: function(data) {
       sortDate(data)
+      renderSortedTitles(data)
     }
   })
 }
@@ -21,5 +22,11 @@ const sortDate = (data) => {
       }
     })
   }
+
+const renderSortedTitles = (data) => {
+  data.forEach((e, i) => {
+    $('.titles').append(e.title + '<br>')
+  })
+}
 
 getData()
