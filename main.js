@@ -25,7 +25,7 @@ const sortDate = (data) => {
 
 const renderSortedTitles = (data) => {
   data.forEach((e, i) => {
-    $('.titles').append(e.title + '<br>')
+    $('.titles').append(`<p class="title">${e.title}<br>`)
   })
 }
 
